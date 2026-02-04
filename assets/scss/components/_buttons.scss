@@ -1,0 +1,21 @@
+/*********************************
+ Buttons
+**********************************/
+@use "../modules" as m;
+
+.btn-01{
+  display: block;
+  max-width: fit-content;
+  margin: 60px auto 0;
+  border: 1px solid m.$white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: m.$white;
+  font-size: 1.6rem;
+  font-weight: 400;
+  @include m.transition(background);
+  &:hover{
+    background-color: m.$white;
+    color: m.$black;
+  }
+}

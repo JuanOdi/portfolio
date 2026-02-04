@@ -1,0 +1,32 @@
+/*********************************
+ Footer
+**********************************/
+@use "../modules" as m;
+
+.footer {
+  padding: 30px 0;
+  color: rgba(m.$white, 0.4);
+
+  &__copyright {
+    text-align: center;
+  }
+  &__link{
+    width: 100%;
+    flex: 1;
+    display: block;
+    background-color: m.$white;
+    max-width: 40px;
+    margin: 40px auto;
+    padding: 8px;
+    border-radius: 100px;
+    border: 1px solid transparent;
+    @include m.transition(background-color, border-color);
+    &:hover{
+      background-color: m.$gray02;
+      border-color: m.$white;
+    }
+  }
+  &__wrap{
+    @include m.flex($ai:center,$gap:20px,$jc:center);
+  }
+}

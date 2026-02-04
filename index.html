@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Juan Odi</title>
+
+        <!-- Fonts (https://fonts.google.com/) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+
+        <!-- FontAwesome (https://fontawesome.com/icons/) -->
+        <link rel="stylesheet" id="fontawesome_style-css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" type="text/css" media="all">
+
+        <!-- Styles -->
+        <link rel="stylesheet" id="aos_style-css" href="https://unpkg.com/aos@next/dist/aos.css" type="text/css" media="all">
+        <link rel="stylesheet" id="swiper_style-css" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" type="text/css" media="all">
+        <link rel="stylesheet" id="site_style-css" href="./assets/css/style.min.css" type="text/css" media="all">
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js" id="jquery-core-js"></script>
+    </head>
+
+    <body class="home">
+
+        <header class="header">
+            <!-- <a class="header__home" href="./">
+                <img class="header__logo" src="./assets/images/common/logo.png" alt="WD PH Traditional" />
+            </a> -->
+
+            <nav class="header__nav">
+                <ul class="header__menu menu">
+                    <li class="menu__item menu__item--01">
+                        <a class="menu__link" href="#top">
+                            <span class="menu__ttl">HOME</span>
+                        </a>
+                    </li>
+                    <li class="menu__item menu__item--02">
+                        <a class="menu__link" href="#work">
+                            <span class="menu__ttl">Portfolio</span>
+                        </a>
+                    </li>
+                    <li class="menu__item menu__item--03">
+                        <a class="menu__link" href="#about">
+                            <span class="menu__ttl">About</span>
+                        </a>
+                    </li>
+                    <li class="menu__item menu__item--03">
+                        <a class="menu__link" href="#service">
+                            <span class="menu__ttl">Services</span>
+                        </a>
+                    </li>
+                    <li class="menu__item menu__item--03">
+                        <a class="menu__link" href="#contact">
+                            <span class="menu__ttl">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__bars menu-bar hidden-pc js-menu">
+                <span class="menu-bar__middle"></span>
+            </div>
+        </header> <!-- .header -->
+
+        <main class="main top">
+           <div class="top-bnr">
+                <div class="top-bnr__img">
+                    <img src=" ./assets/images/top/top-bnr_img.JPG"  alt="" class="img__main">
+                </div>
+                <div class="top-bnr__info">
+                    <p class="top-bnr__txt">Hello, I'm</p>
+                    <h1 class="top-bnr__name">Juan Odi</h1>
+                    <p class="top-bnr__txt top-bnr__txt--02">and this is My Rezume</p>
+                    <a href="./assets/images/resume.pdf" class="top-bnr__link">
+                        Download CV
+                    </a>
+                </div>
+           </div>
+           <section class="top-work" id="work">
+                <div class="container">
+                    <h1 class="ttl-01">Featured <span>Works</span></h1>
+                    <ul class="list-work" >
+                        <li class="list-work__item" data-aos="fade-up" data-aos-duration="1000">
+                            <img src="./assets/images/top/list-work_img01.png" alt="" class="list-work__img">
+                            <h2 class="list-work__ttl">
+                                LCP Coaching Program
+                            </h2>
+                        </li>
+                        <li class="list-work__item" data-aos="fade-up" data-aos-duration="1200">
+                            <img src="./assets/images/top/list-work_img02.png" alt="" class="list-work__img">
+                            <h2 class="list-work__ttl">
+                                Housing Project
+                            </h2>
+                        </li>
+                         <li class="list-work__item" data-aos="fade-up" data-aos-duration="1400">
+                            <img src="./assets/images/top/list-work_img03.png" alt="" class="list-work__img">
+                            <h2 class="list-work__ttl">
+                                Nakamura Kenkou
+                            </h2>
+                        </li>
+                        <li class="list-work__item" data-aos="fade-up" data-aos-duration="1600">
+                            <img src="./assets/images/top/list-work_img04.png" alt="" class="list-work__img">
+                            <h2 class="list-work__ttl">
+                                Shirayuri School
+                            </h2>
+                        </li>
+                        <li class="list-work__item" data-aos="fade-up" data-aos-duration="1800">
+                            <img src="./assets/images/top/list-work_img05.png" alt="" class="list-work__img">
+                            <h2 class="list-work__ttl">
+                               SRC Delivery Company
+                            </h2>
+                        </li>
+                        <li class="list-work__item" data-aos="fade-up" data-aos-duration="2000">
+                            <img src="./assets/images/top/list-work_img06.png" alt="" class="list-work__img">
+                            <h2 class="list-work__ttl">
+                                Kansai Medical University
+                            </h2>
+                        </li>
+                    </ul>
+                </div>
+           </section>
+           <section class="top-about" id="about">
+                <div class="container">
+                    <h1 class="ttl-01">About <span>Me</span></h1>
+                    <div class="top-about__info">
+                        <img src="./assets/images/top/top-bnr_img.JPG" alt="" class="top-about__img" data-aos="fade-right" >
+                        <div class="top-about__wrap" data-aos="fade-left">
+                            <p class="top-about__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim tempora magni maiores iste quidem odio quod minima nesciunt voluptatibus esse. Veritatis sapiente velit voluptatum sint ad, voluptatem cumque illo consectetur!</p>
+                            <ul class="list-about">
+                                <li class="list-about__item">
+                                    <div class="list-about__wrap">
+                                        <img src="./assets/images/top/list-about_img01.png" alt="" class="list-about__img">
+                                        <p class="list-about__ttl">Languages</p>
+                                        <p class="list-about__txt">Html, Scss, PHP, JS,<br>JQuery, React Js</p>
+                                    </div>
+                                </li>
+                                <li class="list-about__item">
+                                    <img src="./assets/images/top/list-about_img02.png" alt="" class="list-about__img">
+                                    <p class="list-about__ttl">Education</p>
+                                    <p class="list-about__txt">Bachelor of Computer Science</p>
+                                </li>
+                                <li class="list-about__item">
+                                    <img src="./assets/images/top/list-about_img03.png" alt="" class="list-about__img">
+                                    <p class="list-about__ttl">Projects</p>
+                                    <p class="list-about__txt">Built more than 10 websites</p>
+                                </li>
+                            </ul>
+                            <div class="top-about__tools">
+                                <p class="top-about__tools-txt">Tools i use</p>
+                                <div class="top-about__tools-wrap">
+                                    <img src="./assets/images/top/top-about_img01.png" alt="" class="top-about__tools-img">
+                                    <img src="./assets/images/top/top-about_img02.png" alt="" class="top-about__tools-img">
+                                    <img src="./assets/images/top/top-about_img03.png" alt="" class="top-about__tools-img">
+                                    <img src="./assets/images/top/top-about_img06.png" alt="" class="top-about__tools-img">
+                                    <img src="./assets/images/top/top-about_img05.png" alt="" class="top-about__tools-img">
+                                    <img src="./assets/images/top/top-about_img04.png" alt="" class="top-about__tools-img">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </section>
+           <section class="top-services" id="service">
+                <div class="container">
+                    <h1 class="ttl-01">My <span>Services</span></h1>
+                    <ul class="list-services">
+                        <li class="list-services__item">
+                            <a href="#" class="list-services__link">
+                                <div class="list-services__img">
+                                    <img src="./assets/images/top/list-services_img04.png" alt="">
+                                </div>
+                                <h2 class="list-services__ttl">Wordpress Development</h2>
+                               
+                                <div class="list-services__wrap">
+                                    <p class="list-services__txt">I develop custom WordPress websites using plugins such as Advanced Custom Fields (ACF), custom post types, and modern themes to create flexible, scalable, and easy-to-manage content structures.</p>
+                                    <p class="list-services__link-btn">
+                                        Learn More <i class="fa-solid fa-angle-right"></i>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                         <li class="list-services__item">
+                            <a href="#" class="list-services__link">
+                                <div class="list-services__img">
+                                    <img src="./assets/images/top/list-services_img01.png" alt="">
+                                </div>
+                                <h2 class="list-services__ttl">Technical SEO</h2>
+                                
+                                <div class="list-services__wrap">
+                                    <p class="list-services__txt">I apply technical SEO best practices to improve website performance, structure, and search engine visibility.</p>
+                                    <p class="list-services__link-btn">
+                                        Learn More <i class="fa-solid fa-angle-right"></i>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-services__item">
+                            <a href="#" class="list-services__link">
+                                <div class="list-services__img">
+                                    <img src="./assets/images/top/list-services_img03.png" alt="">
+                                </div>
+                                <h2 class="list-services__ttl">UI / UX Implementation</h2>
+                                <div class="list-services__wrap">
+                                    <p class="list-services__txt">I implement intuitive and responsive user interfaces that focus on usability, consistency, and smooth user interactions.</p>
+                                    <p class="list-services__link-btn">
+                                        Learn More <i class="fa-solid fa-angle-right"></i>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn-01">
+                        Show More
+                    </a>
+                </div>
+           </section>
+           <section class="top-contact" id="contact">
+                <div class="container">
+                    <h1 class="ttl-01">Get in <span>Touch</span></h1>
+                    <div class="top-contact__info">
+                        <div class="top-contact__form">
+                            <h2 class="top-contact__ttl">Send Message</h2>
+                            <form  
+                                action="https://formspree.io/f/mzdvnjyq"
+                                method="POST">
+                               
+                                <input type="text" placeholder="Name" name="name">
+                                <input type="email" placeholder="Email" name="email">
+                              
+                                <textarea name="message" id="" placeholder="Message"></textarea>
+                                <button type="submit">Send Message</button>
+                            </form>
+                        </div>
+                        <div class="top-contact__wrap">
+                            <h2 class="top-contact__ttl">My Contact Deatails</h2>
+                            <p class="top-contact__txt">
+                                <span>Email</span>
+                                odijuan28@gmail.com
+                            </p>
+                            <p class="top-contact__txt">
+                                <span>Phone</span>
+                                +63 9297849369
+                            </p>
+                            <p class="top-contact__txt">
+                                <span>Address</span>
+                                Pasig, 1611<br>
+                                Blk 44 Lot 23,<br>
+                                Kalinawan Street.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+           </section>
+        </main> <!-- .main -->
+
+        <footer class="footer bg-gray">
+            <div class="container">
+                <p class="footer__copyright">Copyright © 2026. All rights reserved. Website developed by Juan Odi.</p>
+                <ul class="footer__wrap">
+                    <li class="footer__link-wrap">
+                        <a href="mailto:odijuan@gmail.com" class="footer__link">
+                            <img src="./assets/images/common/gmail.png" alt="">
+                        </a>
+                    </li>
+                    <li class="footer__link-wrap">
+                    <a href="https://www.linkedin.com/in/juan-odi-815885272/" class="footer__link">
+                        <img src="./assets/images/common/linkedin.png" alt="">
+                    </a>
+                </li>
+                    <li class="footer__link-wrap">
+                        <a href="https://www.facebook.com/odi.juan.7/" class="footer__link">
+                            <img src="./assets/images/common/facebook.png" alt="">
+                        </a>
+                    </li>
+                    <li class="footer__link-wrap">
+                        <a href="mailto:odijuan@gmail.com" class="footer__link">
+                            <img src="./assets/images/common/instagram.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer> <!-- .footer -->
+        
+        <!-- Scripts -->
+        <script type="text/javascript" src="https://unpkg.com/aos@next/dist/aos.js" id="aos_script-js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" id="swiper_script-js"></script>
+        <script type="text/javascript" src="./assets/js/scripts.js" id="site_script-js"></script>
+    </body>
+</html>

@@ -1,0 +1,202 @@
+/*********************************
+ Top Page
+**********************************/
+@use "../modules" as m;
+
+/* Banner */
+.top-bnr{
+  position: relative;
+  // max-height: 800px;
+  height: 1000px;
+  &__img{
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+    .img__main{
+      background: rgba(50, 50, 50, 0.6);
+      background: rgba(20, 20, 20, 0.75);
+      filter: grayscale(100%) brightness(75%);
+      width: 100%;
+      height: 100%; 
+    }
+  }
+
+  &__info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 100%;
+  }
+ 
+  &__txt{
+    color: m.$white;
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: .04em;
+    line-height: 1;
+    font-weight: 400;
+    &--02{
+      font-size: 2rem;
+      line-height: 1.5;
+      margin-top: 20px;
+      text-transform: uppercase;
+      opacity: .5;
+    }
+
+    @include m.mqMax {
+      font-size: 3rem;
+      &--02{
+        font-size: 1.5rem;
+      }
+    }
+  }
+  &__name{
+    color: m.$white;
+    line-height: 1;
+    font-weight: 700;
+    // text-transform: uppercase;
+    letter-spacing: .05em;
+    font-size: 7.5rem;
+    text-align: center;
+    @include m.mqMax {
+      font-size: 5rem;
+    }
+  }
+  &__link{
+    display: block;
+    margin: 30px auto 0;
+    max-width: fit-content;
+    padding: 10px 20px;
+    border: 1px solid rgba(m.$white, 0.5);
+    color: rgba(m.$white, 0.5);
+    @include m.transition(border-color, color);
+    &:hover{
+      border-color: m.$white;
+      color: m.$white;
+    }
+  }
+}
+.top-about{
+  &__info{
+    margin-top: 60px;
+    @include m.flex($ai:center,$jc:center, $gap:80px);
+    @include m.mqMax{
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+  &__img{
+    aspect-ratio: 350/360;
+    max-width: 350px;
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__wrap{
+    flex:1;
+    width: 100%;
+    max-width: 700px;
+  }
+  &__txt{
+    color: m.$white;
+    letter-spacing: 0.04em;
+  }
+  &__tools{ 
+    &-txt{
+      margin-top: 20px;
+      color: m.$white;
+      letter-spacing: 0.04em;
+    }
+    &-wrap{
+      @include m.flex($ai:center,$gap:20px,$fw:wrap);
+    }
+    &-img{
+      margin-top: 20px;
+      padding: 8px;
+      max-width: 55px;
+      // max-height: 35px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      @include m.transition(border);
+      &:hover{
+        border: 1px solid m.$white;
+      }
+    }
+    
+  }
+}
+
+.top-contact{
+  form{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  input{
+    width: 100%;
+    height: 50px;
+    font-size: 1.4rem;
+    background-color: m.$gray02;
+    border: none;
+    padding-inline: 10px;
+    &:nth-child(n+2){
+      margin-top: 20px;
+    }
+  }
+  
+  textarea{
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: m.$gray02;
+
+  }
+  button{
+    display: block;
+    max-width: fit-content;
+    margin: 40px 0;
+    background-color: m.$gray02;
+    border: 1px solid m.$white;
+    color: m.$white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &__info{
+    margin-top: 60px;
+    @include m.flex($ai:flex-start,$gap:60px,$jc:center);
+    @include m.mqMax{
+      flex-direction: column;
+      // align-items: center;
+      justify-content: flex-start;
+      gap: 40px;
+    }
+  }
+  &__wrap{
+    flex: 1;
+    width: 100%;
+    max-width: 400px;
+  }
+  &__ttl{
+    font-size: 2.8rem;
+    font-weight: 200;
+    margin-bottom: 20px;
+    
+  }
+  &__txt{
+    font-size: 1.5rem;
+    opacity: .8;
+    margin-top: 20px;
+    line-height: 1.8;
+    span{
+      display: block;
+      text-transform: uppercase;
+      color: #2c3e50;
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+  }
+}
