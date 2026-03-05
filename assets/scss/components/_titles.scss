@@ -1,0 +1,15 @@
+/*********************************
+ Titles
+**********************************/
+@use "../modules" as m;
+
+.ttl-01{
+  color:m.$white;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: .08em;
+  span{
+    font-weight: 700;
+  }
+}
