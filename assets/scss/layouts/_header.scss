@@ -4,105 +4,176 @@
 @use "../modules" as m;
 
 .header {
-  @include m.flex($gap: 50px, $ai: center, $jc:center);
+  @include m.flex($gap: 30px, $ai: center, $jc: space-between);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 70px;
-  padding: 0 40px;
-  // background: m.$white;
+  padding: 0 32px;
   z-index: 100;
   user-select: none;
-  @include m.transition(background-color);
+  background: transparent;
+  backdrop-filter: blur(0);
+  border-bottom: 1px solid transparent;
+  transition: background-color 0.3s ease,
+              border-color 0.3s ease,
+              backdrop-filter 0.3s ease,
+              height 0.3s ease;
+
   @include m.mqMax {
-    height: 50px;
+    height: 60px;
     padding: 0 20px;
-    justify-content: flex-end;
   }
 
-  .admin-bar & {
-    top: 32px;
+  .is-scrolled & {
+    background-color: rgba(m.$bg-deep, 0.78);
+    border-bottom-color: m.$border;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
-  .is-menu-opened &, .is-scrolled & {
-   background-color: m.$white;
-  }
+  &__brand {
+    font-family: m.$font-mono;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: m.$white;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 2px;
+    transition: opacity 0.2s ease;
 
-  &__logo {
-    max-height: 70px;
-    pointer-events: none;
-    @include m.mqMax {
-      max-height: 50px;
+    &:hover {
+      opacity: 0.85;
     }
   }
 
+  &__brand-prompt {
+    color: m.$accent;
+  }
+
+  &__brand-name {
+    color: m.$white;
+  }
+
+  &__brand-caret {
+    color: m.$accent;
+    animation: caret-blink 1s steps(1) infinite;
+  }
+
   &__nav {
+    @include m.flex($gap: 40px, $ai: center, $jc: flex-end);
     flex: 1;
-    @include m.flex($gap: 50px, $ai: center, $jc: center);
+
     @include m.mqMax {
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
-      height: calc(100vh - 100%);
-      overflow-y: scroll;
-      background: m.$white;
+      max-height: calc(100vh - 60px);
+      overflow-y: auto;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 30px 20px 40px;
+      background: rgba(m.$bg-deep, 0.98);
+      border-bottom: 1px solid m.$border;
+      backdrop-filter: blur(10px);
       opacity: 0;
       visibility: hidden;
-      @include m.transition(opacity, visibility);
-
-      .admin-bar & {
-        top: calc(100% + 32px);
-        height: calc(100vh - (100% - 32px));
-      }
+      transform: translateY(-8px);
+      transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
 
       .is-menu-opened & {
         opacity: 1;
         visibility: visible;
-        background-color: m.$white;
+        transform: translateY(0);
       }
+    }
+  }
+
+  &__cta {
+    font-family: m.$font-mono;
+    font-size: 1.3rem;
+    color: m.$accent;
+    border: 1px solid rgba(m.$accent, 0.5);
+    border-radius: 6px;
+    padding: 8px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+
+    &:hover {
+      background-color: rgba(m.$accent, 0.12);
+      border-color: m.$accent;
+      transform: translateY(-1px);
+    }
+
+    @include m.mqMax {
+      align-self: flex-start;
+      margin-top: 16px;
     }
   }
 }
 
 /* Menu */
 .menu {
-  @include m.flex($gap: 30px, $ai: center, $jc: flex-end);
-  &__ttl{
-    text-transform: uppercase;
-    color: m.$white;
-    @include m.mqMax {
-      color: m.$black;
-    }
+  @include m.flex($gap: 24px, $ai: center, $jc: flex-end);
 
-    .is-scrolled & {
-      color: m.$black;
-    }
-  }
-  @include m.mqMax{
+  @include m.mqMax {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
   }
- &__link {
-    position: relative; // needed for the pseudo-element
+
+  &__link {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    font-family: m.$font-mono;
+    font-size: 1.4rem;
+    color: m.$txt-soft;
+    padding: 6px 2px;
+    transition: color 0.25s ease;
 
     &::after {
       content: "";
       position: absolute;
       left: 0;
-      bottom: 0; 
-      width: 0; 
-      height: 2px; 
-      background-color: m.$gray02; 
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: m.$accent;
       transition: width 0.3s ease;
     }
 
     &:hover {
+      color: m.$accent;
+
       &::after {
         width: 100%;
       }
-      
-     
+    }
+  }
+
+  &__num {
+    color: m.$accent;
+    font-size: 1.2rem;
+  }
+
+  &__ttl {
+    text-transform: lowercase;
+  }
+
+  @include m.mqMax {
+    &__link {
+      width: 100%;
+      padding: 12px 4px;
+      border-bottom: 1px solid rgba(m.$border, 0.6);
+      font-size: 1.6rem;
     }
   }
 }
@@ -111,7 +182,7 @@
 .menu-bar {
   position: relative;
   aspect-ratio: 1 / 1;
-  width: 40px;
+  width: 34px;
   cursor: pointer;
 
   &::before,
@@ -120,24 +191,19 @@
     content: '';
     position: absolute;
     left: 50%;
-    width: 100%;
+    width: 70%;
     height: 2px;
-    background: m.$white;
+    background: m.$accent;
     transform: translate(-50%, -50%);
-    @include m.transition(top, transform, opacity);
+    transition: top 0.25s ease, transform 0.25s ease, opacity 0.25s ease;
   }
-  
+
   &::before {
-    top: calc(50% - 10px);
+    top: calc(50% - 8px);
 
     .is-menu-opened & {
       top: 50%;
       transform: translate(-50%, -50%) rotate(45deg);
-      background: m.$black;
-    }
-
-    .is-scrolled & {
-      background: m.$black;
     }
   }
 
@@ -146,23 +212,19 @@
 
     .is-menu-opened & {
       opacity: 0;
-      background: m.$black;
-    }
-    .is-scrolled & {
-      background: m.$black;
     }
   }
 
   &::after {
-    top: calc(50% + 10px);
+    top: calc(50% + 8px);
 
     .is-menu-opened & {
       top: 50%;
       transform: translate(-50%, -50%) rotate(-45deg);
-      background: m.$black;
-    }
-    .is-scrolled & {
-      background: m.$black; 
     }
   }
+}
+
+@keyframes caret-blink {
+  50% { opacity: 0; }
 }

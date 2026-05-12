@@ -5,10 +5,24 @@ $gray: #d3d3d3;
 $gray02:#333333;
 $green:#bac964;
 
+// Dev / terminal palette
+$bg-deep:    #0d1117;   // page bg
+$bg-panel:   #161b22;   // card / panel bg
+$bg-panel-2: #1c232c;   // hover / nested panel bg
+$border:     #2a3340;   // subtle border
+$border-strong:#3a4554;
+$txt-muted:  #8b949e;   // secondary text
+$txt-soft:   #c9d1d9;   // primary text
+$accent:     #bac964;   // existing green, kept as primary accent
+$accent-2:   #7ee787;   // terminal "success" green
+$accent-cyan:#79c0ff;   // terminal "info" blue
+$accent-pink:#ff7b72;   // terminal "keyword" red/pink
+
 $default-font-size: 1.6rem;
 
 $font-noto-serif: "Noto Serif JP", serif;
 $font-noto-sans: "Noto Sans JP", sans-serif;
+$font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
 $font-primary: $font-noto-sans;
 

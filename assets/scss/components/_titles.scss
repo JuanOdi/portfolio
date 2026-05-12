@@ -3,13 +3,40 @@
 **********************************/
 @use "../modules" as m;
 
-.ttl-01{
-  color:m.$white;
+.ttl-01 {
+  color: m.$white;
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 300;
-  letter-spacing: .08em;
-  span{
+  letter-spacing: .04em;
+  line-height: 1.1;
+  margin-top: 8px;
+
+  span {
     font-weight: 700;
+    background: linear-gradient(90deg, m.$accent 0%, m.$accent-2 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+            color: transparent;
+  }
+
+  @include m.mqMax {
+    font-size: 3rem;
+  }
+}
+
+// Small mono label above each section title
+.section-label {
+  font-family: m.$font-mono;
+  font-size: 1.3rem;
+  letter-spacing: .12em;
+  text-transform: lowercase;
+  color: m.$txt-muted;
+  text-align: center;
+
+  &__num {
+    color: m.$accent;
+    margin-right: 6px;
   }
 }

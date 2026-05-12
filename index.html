@@ -9,13 +9,12 @@
         <!-- Fonts (https://fonts.google.com/) -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
 
         <!-- FontAwesome (https://fontawesome.com/icons/) -->
         <link rel="stylesheet" id="fontawesome_style-css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" type="text/css" media="all">
 
         <!-- Styles -->
-        <link rel="stylesheet" id="aos_style-css" href="https://unpkg.com/aos@next/dist/aos.css" type="text/css" media="all">
         <link rel="stylesheet" id="swiper_style-css" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" type="text/css" media="all">
         <link rel="stylesheet" id="site_style-css" href="./assets/css/style.min.css" type="text/css" media="all">
 
@@ -26,38 +25,64 @@
     <body class="home">
 
         <header class="header">
-            <!-- <a class="header__home" href="./">
-                <img class="header__logo" src="./assets/images/common/logo.png" alt="WD PH Traditional" />
-            </a> -->
+            <a class="header__brand" href="#top">
+                <span class="header__brand-prompt">~/</span><span class="header__brand-name">juan.odi</span><span class="header__brand-caret">_</span>
+            </a>
 
             <nav class="header__nav">
                 <ul class="header__menu menu">
-                    <li class="menu__item menu__item--01">
+                    <li class="menu__item">
                         <a class="menu__link" href="#top">
-                            <span class="menu__ttl">HOME</span>
+                            <span class="menu__num">01.</span>
+                            <span class="menu__ttl">home</span>
                         </a>
                     </li>
-                    <li class="menu__item menu__item--02">
+                    <li class="menu__item">
                         <a class="menu__link" href="#work">
-                            <span class="menu__ttl">Portfolio</span>
+                            <span class="menu__num">02.</span>
+                            <span class="menu__ttl">work</span>
                         </a>
                     </li>
-                    <li class="menu__item menu__item--03">
+                    <li class="menu__item">
                         <a class="menu__link" href="#about">
-                            <span class="menu__ttl">About</span>
+                            <span class="menu__num">03.</span>
+                            <span class="menu__ttl">about</span>
                         </a>
                     </li>
-                    <li class="menu__item menu__item--03">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#skills">
+                            <span class="menu__num">04.</span>
+                            <span class="menu__ttl">skills</span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#timeline">
+                            <span class="menu__num">05.</span>
+                            <span class="menu__ttl">journey</span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#process">
+                            <span class="menu__num">06.</span>
+                            <span class="menu__ttl">process</span>
+                        </a>
+                    </li>
+                    <li class="menu__item">
                         <a class="menu__link" href="#service">
-                            <span class="menu__ttl">Services</span>
+                            <span class="menu__num">07.</span>
+                            <span class="menu__ttl">services</span>
                         </a>
                     </li>
-                    <li class="menu__item menu__item--03">
+                    <li class="menu__item">
                         <a class="menu__link" href="#contact">
-                            <span class="menu__ttl">Contact</span>
+                            <span class="menu__num">08.</span>
+                            <span class="menu__ttl">contact</span>
                         </a>
                     </li>
                 </ul>
+                <a href="./assets/images/resume.pdf" class="header__cta" download>
+                    resume.pdf <i class="fa-solid fa-arrow-down"></i>
+                </a>
             </nav>
 
             <div class="header__bars menu-bar hidden-pc js-menu">
@@ -65,87 +90,166 @@
             </div>
         </header> <!-- .header -->
 
-        <main class="main top">
-           <div class="top-bnr">
-                <div class="top-bnr__img">
-                    <img src=" ./assets/images/top/top-bnr_img.JPG"  alt="" class="img__main">
+        <main class="main top" id="top">
+           <section class="top-bnr">
+                <div class="top-bnr__bg" aria-hidden="true"></div>
+                <div class="container top-bnr__container">
+                    <div class="top-bnr__intro">
+                        <p class="top-bnr__hello">
+                            <span class="top-bnr__prompt">$</span>
+                            <span class="top-bnr__typed">echo "hello, world"</span>
+                            <span class="top-bnr__caret"></span>
+                        </p>
+                        <h1 class="top-bnr__name">Juan <span>Odi</span></h1>
+                        <h2 class="top-bnr__role">
+                            <span class="tok-key">const</span>
+                            <span class="tok-var">role</span>
+                            <span class="tok-op">=</span>
+                            <span class="tok-str">"Front-end &amp; WordPress Developer"</span><span class="tok-op">;</span>
+                        </h2>
+                        <p class="top-bnr__desc">
+                            I build fast, responsive, SEO-friendly websites &mdash; custom WordPress themes, clean UI, and reliable maintenance.
+                        </p>
+                        <div class="top-bnr__meta">
+                            <span class="badge badge--ok">
+                                <span class="badge__dot"></span> available for work
+                            </span>
+                            <span class="badge">
+                                <i class="fa-solid fa-location-dot"></i> Pasig, PH
+                            </span>
+                        </div>
+                        <div class="top-bnr__actions">
+                            <a href="#work" class="btn btn--primary">
+                                view work <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <a href="./assets/images/resume.pdf" class="btn btn--ghost" download>
+                                <i class="fa-solid fa-download"></i> resume.pdf
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="top-bnr__card" data-aos="fade-up" data-aos-duration="900">
+                        <div class="code-window">
+                            <div class="code-window__bar">
+                                <span class="code-window__dot code-window__dot--r"></span>
+                                <span class="code-window__dot code-window__dot--y"></span>
+                                <span class="code-window__dot code-window__dot--g"></span>
+                                <span class="code-window__file">about.ts</span>
+                            </div>
+                            <div class="code-window__body">
+                                <div class="code-line"><span class="ln">1</span><span class="tok-com">// developer.about()</span></div>
+                                <div class="code-line"><span class="ln">2</span><span class="tok-key">const</span> <span class="tok-var">developer</span> <span class="tok-op">=</span> {</div>
+                                <div class="code-line code-line--indent"><span class="ln">3</span><span class="tok-prop">name</span><span class="tok-op">:</span> <span class="tok-str">"Juan Odi"</span>,</div>
+                                <div class="code-line code-line--indent"><span class="ln">4</span><span class="tok-prop">stack</span><span class="tok-op">:</span> [<span class="tok-str">"HTML"</span>, <span class="tok-str">"SCSS"</span>, <span class="tok-str">"JS"</span>, <span class="tok-str">"React"</span>, <span class="tok-str">"WP"</span>],</div>
+                                <div class="code-line code-line--indent"><span class="ln">5</span><span class="tok-prop">focus</span><span class="tok-op">:</span> <span class="tok-str">"performance &amp; UX"</span>,</div>
+                                <div class="code-line code-line--indent"><span class="ln">6</span><span class="tok-prop">coffee</span><span class="tok-op">:</span> <span class="tok-bool">true</span>,</div>
+                                <div class="code-line"><span class="ln">7</span>}<span class="tok-op">;</span></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="top-bnr__info">
-                    <p class="top-bnr__txt">Hello, I'm</p>
-                    <h1 class="top-bnr__name">Juan Odi</h1>
-                    <p class="top-bnr__txt top-bnr__txt--02">and this is My Rezume</p>
-                    <a href="./assets/images/resume.pdf" class="top-bnr__link">
-                        Download CV
-                    </a>
-                </div>
-           </div>
+           </section>
            <section class="top-work" id="work">
                 <div class="container">
+                    <p class="section-label"><span class="section-label__num">// 02.</span> selected projects</p>
                     <h1 class="ttl-01">Featured <span>Works</span></h1>
-                    <ul class="list-work" >
+                    <ul class="list-work">
                         <li class="list-work__item" data-aos="fade-up" data-aos-duration="1000">
-                            <a href="https://gallagherfitzgerald.com/">
-                                <img src="./assets/images/top/list-work_img01.png" alt="" class="list-work__img">
-                                <h2 class="list-work__ttl">
-                                    Gallagher Fitzgerald
-                                </h2>
+                            <a href="https://gallagherfitzgerald.com/" target="_blank" rel="noopener noreferrer" class="list-work__link">
+                                <div class="list-work__img-wrap">
+                                    <img src="./assets/images/top/list-work_img01.png" alt="Gallagher Fitzgerald" class="list-work__img">
+                                </div>
+                                <div class="list-work__overlay">
+                                    <span class="list-work__tag">Web Design</span>
+                                    <h2 class="list-work__ttl">Gallagher Fitzgerald</h2>
+                                    <span class="list-work__btn">Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
                             </a>
                         </li>
                         <li class="list-work__item" data-aos="fade-up" data-aos-duration="1400">
-                            <a href="https://acecarpentry.ie/">
-                                <img src="./assets/images/top/list-work_img03.png" alt="" class="list-work__img">
-                                <h2 class="list-work__ttl">
-                                    Ace Carpentry
-                                </h2>
+                            <a href="https://acecarpentry.ie/" target="_blank" rel="noopener noreferrer" class="list-work__link">
+                                <div class="list-work__img-wrap">
+                                    <img src="./assets/images/top/list-work_img03.png" alt="Ace Carpentry" class="list-work__img">
+                                </div>
+                                <div class="list-work__overlay">
+                                    <span class="list-work__tag">WordPress</span>
+                                    <h2 class="list-work__ttl">Ace Carpentry</h2>
+                                    <span class="list-work__btn">Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
                             </a>
                         </li>
                         <li class="list-work__item" data-aos="fade-up" data-aos-duration="1200">
-                            <a href="https://smatching.jp/">
-                                <img src="./assets/images/top/list-work_img02.png" alt="" class="list-work__img">
-                                <h2 class="list-work__ttl">
-                                    Smatching.jp
-                                </h2>
+                            <a href="https://smatching.jp/" target="_blank" rel="noopener noreferrer" class="list-work__link">
+                                <div class="list-work__img-wrap">
+                                    <img src="./assets/images/top/list-work_img02.png" alt="Smatching.jp" class="list-work__img">
+                                </div>
+                                <div class="list-work__overlay">
+                                    <span class="list-work__tag">Web App</span>
+                                    <h2 class="list-work__ttl">Smatching.jp</h2>
+                                    <span class="list-work__btn">Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
                             </a>
                         </li>
                         <li class="list-work__item" data-aos="fade-up" data-aos-duration="1600">
-                            <a href="https://fujinaika-clinic.com/">
-                                <img src="./assets/images/top/list-work_img07.png" alt="" class="list-work__img">
-                                <h2 class="list-work__ttl">
-                                    Fuji nakika Clinic
-                                </h2>
+                            <a href="https://fujinaika-clinic.com/" target="_blank" rel="noopener noreferrer" class="list-work__link">
+                                <div class="list-work__img-wrap">
+                                    <img src="./assets/images/top/list-work_img07.png" alt="Fuji naika Clinic" class="list-work__img">
+                                </div>
+                                <div class="list-work__overlay">
+                                    <span class="list-work__tag">Clinic Site</span>
+                                    <h2 class="list-work__ttl">Fuji naika Clinic</h2>
+                                    <span class="list-work__btn">Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
                             </a>
                         </li>
                         <li class="list-work__item" data-aos="fade-up" data-aos-duration="1800">
-                            <a href="https://jyokoji-kitakoshigaya.jp/" class="">
-                                <img src="./assets/images/top/list-work_img08.png" alt="" class="list-work__img">
-                                <h2 class="list-work__ttl">
-                                Jyokoji-kitakoshigaya
-                                </h2>
+                            <a href="https://jyokoji-kitakoshigaya.jp/" target="_blank" rel="noopener noreferrer" class="list-work__link">
+                                <div class="list-work__img-wrap">
+                                    <img src="./assets/images/top/list-work_img08.png" alt="Jyokoji Kitakoshigaya" class="list-work__img">
+                                </div>
+                                <div class="list-work__overlay">
+                                    <span class="list-work__tag">Temple Site</span>
+                                    <h2 class="list-work__ttl">Jyokoji Kitakoshigaya</h2>
+                                    <span class="list-work__btn">Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                                </div>
                             </a>
                         </li>
-                        <li class="list-work__item" data-aos="fade-up" data-aos-duration="2000">
-                            <img src="./assets/images/top/list-work_img06.png" alt="" class="list-work__img">
-                            <h2 class="list-work__ttl">
-                                Kansai Medical University
-                            </h2>
+                        <li class="list-work__item list-work__item--soon" data-aos="fade-up" data-aos-duration="2000">
+                            <div class="list-work__link" aria-disabled="true">
+                                <div class="list-work__img-wrap">
+                                    <img src="./assets/images/top/list-work_img06.png" alt="Kansai Medical University" class="list-work__img">
+                                </div>
+                                <div class="list-work__overlay">
+                                    <span class="list-work__tag">Coming Soon</span>
+                                    <h2 class="list-work__ttl">Kansai Medical University</h2>
+                                    <span class="list-work__btn list-work__btn--disabled">In Progress <i class="fa-solid fa-hourglass-half"></i></span>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
            </section>
            <section class="top-about" id="about">
                 <div class="container">
+                    <p class="section-label"><span class="section-label__num">// 03.</span> about me</p>
                     <h1 class="ttl-01">About <span>Me</span></h1>
+
                     <div class="top-about__info">
-                        <img src="./assets/images/top/top-bnr_img.JPG" alt="" class="top-about__img" data-aos="fade-right" >
+                        <div class="top-about__avatar" data-aos="fade-right">
+                            <div class="top-about__avatar-frame">
+                                <img src="./assets/images/top/top-bnr_img.JPG" alt="Juan Odi" class="top-about__img">
+                            </div>
+                            <div class="top-about__avatar-tag">
+                                <span class="badge__dot"></span> online
+                            </div>
+                        </div>
                         <div class="top-about__wrap" data-aos="fade-left">
-                            <p class="top-about__txt">I’m Juan Odi, a front-end and WordPress developer specializing in building responsive, SEO-friendly websites. I create custom WordPress solutions using ACF and custom post types, implement intuitive UI/UX, and provide ongoing website maintenance and technical SEO support to deliver efficient and user-focused web experiences.</p>
+                            <p class="top-about__txt">I&rsquo;m Juan Odi, a front-end and WordPress developer specializing in building responsive, SEO-friendly websites. I create custom WordPress solutions using ACF and custom post types, implement intuitive UI/UX, and provide ongoing website maintenance and technical SEO support to deliver efficient and user-focused web experiences.</p>
                             <ul class="list-about">
                                 <li class="list-about__item">
-                                    <div class="list-about__wrap">
-                                        <img src="./assets/images/top/list-about_img01.png" alt="" class="list-about__img">
-                                        <p class="list-about__ttl">Languages</p>
-                                        <p class="list-about__txt">Html, Scss, PHP, JS,<br>JQuery, React Js</p>
-                                    </div>
+                                    <img src="./assets/images/top/list-about_img01.png" alt="" class="list-about__img">
+                                    <p class="list-about__ttl">Languages</p>
+                                    <p class="list-about__txt">HTML, SCSS, PHP, JS, jQuery, React</p>
                                 </li>
                                 <li class="list-about__item">
                                     <img src="./assets/images/top/list-about_img02.png" alt="" class="list-about__img">
@@ -159,56 +263,191 @@
                                 </li>
                             </ul>
                             <div class="top-about__tools">
-                                <p class="top-about__tools-txt">Tools i use</p>
+                                <p class="top-about__tools-txt"><span class="tok-com">//</span> tools i use</p>
                                 <div class="top-about__tools-wrap">
-                                    <img src="./assets/images/top/top-about_img01.png" alt="" class="top-about__tools-img">
-                                    <img src="./assets/images/top/top-about_img02.png" alt="" class="top-about__tools-img">
-                                    <img src="./assets/images/top/top-about_img03.png" alt="" class="top-about__tools-img">
-                                    <img src="./assets/images/top/top-about_img06.png" alt="" class="top-about__tools-img">
-                                    <img src="./assets/images/top/top-about_img05.png" alt="" class="top-about__tools-img">
-                                    <img src="./assets/images/top/top-about_img04.png" alt="" class="top-about__tools-img">
+                                    <img src="./assets/images/top/top-about_img01.png" alt="" class="top-about__tools-img" title="HTML5">
+                                    <img src="./assets/images/top/top-about_img02.png" alt="" class="top-about__tools-img" title="CSS3">
+                                    <img src="./assets/images/top/top-about_img03.png" alt="" class="top-about__tools-img" title="JavaScript">
+                                    <img src="./assets/images/top/top-about_img06.png" alt="" class="top-about__tools-img" title="React">
+                                    <img src="./assets/images/top/top-about_img05.png" alt="" class="top-about__tools-img" title="WordPress">
+                                    <img src="./assets/images/top/top-about_img04.png" alt="" class="top-about__tools-img" title="PHP">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
            </section>
+           <section class="top-timeline" id="timeline">
+                <div class="container">
+                    <p class="section-label"><span class="section-label__num">// 05.</span> my journey</p>
+                    <h1 class="ttl-01">Career <span>Timeline</span></h1>
+                    <ol class="timeline">
+                        <li class="timeline__item js-timeline-item">
+                            <div class="timeline__marker">
+                                <span class="timeline__dot"></span>
+                            </div>
+                            <div class="timeline__content">
+                                <span class="timeline__date">2020</span>
+                                <h3 class="timeline__ttl">Started Computer Science</h3>
+                                <p class="timeline__org">Bachelor of Computer Science</p>
+                                <p class="timeline__txt">Began my formal CS journey &mdash; discovered the web, fell in love with HTML, CSS, and turning ideas into pixels.</p>
+                                <div class="timeline__tags">
+                                    <span class="timeline__tag">HTML</span>
+                                    <span class="timeline__tag">CSS</span>
+                                    <span class="timeline__tag">JS</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline__item js-timeline-item">
+                            <div class="timeline__marker">
+                                <span class="timeline__dot"></span>
+                            </div>
+                            <div class="timeline__content">
+                                <span class="timeline__date">2023</span>
+                                <h3 class="timeline__ttl">First Production Sites</h3>
+                                <p class="timeline__org">Freelance Front-end Developer</p>
+                                <p class="timeline__txt">Shipped responsive marketing sites for clients in Japan and Ireland. Started writing reusable SCSS architectures.</p>
+                                <div class="timeline__tags">
+                                    <span class="timeline__tag">SCSS</span>
+                                    <span class="timeline__tag">jQuery</span>
+                                    <span class="timeline__tag">Swiper</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline__item js-timeline-item">
+                            <div class="timeline__marker">
+                                <span class="timeline__dot"></span>
+                            </div>
+                            <div class="timeline__content">
+                                <span class="timeline__date">2024</span>
+                                <h3 class="timeline__ttl">WordPress &amp; Custom Themes</h3>
+                                <p class="timeline__org">Full-stack WordPress Dev</p>
+                                <p class="timeline__txt">Built custom themes using ACF, custom post types, and clean PHP. Delivered SEO-optimized, lightning-fast clinic and corporate sites.</p>
+                                <div class="timeline__tags">
+                                    <span class="timeline__tag">WordPress</span>
+                                    <span class="timeline__tag">PHP</span>
+                                    <span class="timeline__tag">ACF</span>
+                                    <span class="timeline__tag">SEO</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline__item js-timeline-item">
+                            <div class="timeline__marker">
+                                <span class="timeline__dot timeline__dot--active"></span>
+                            </div>
+                            <div class="timeline__content">
+                                <span class="timeline__date">2025 &ndash; present</span>
+                                <h3 class="timeline__ttl">React &amp; Modern Stack</h3>
+                                <p class="timeline__org">Front-end Developer</p>
+                                <p class="timeline__txt">Expanding into React, component-driven architecture, and interactive UI work with GSAP &amp; modern tooling. Always learning.</p>
+                                <div class="timeline__tags">
+                                    <span class="timeline__tag">React</span>
+                                    <span class="timeline__tag">GSAP</span>
+                                    <span class="timeline__tag">Vite</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+           </section>
+           <section class="top-process" id="process">
+                <div class="container">
+                    <p class="section-label"><span class="section-label__num">// 06.</span> how i work</p>
+                    <h1 class="ttl-01">My <span>Process</span></h1>
+                    <ol class="process">
+                        <li class="process__step js-process-step">
+                            <div class="process__head">
+                                <span class="process__num">01</span>
+                                <span class="process__icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            </div>
+                            <h3 class="process__ttl">Discover</h3>
+                            <p class="process__txt">Understand the goals, audience, brand and constraints. I ask a lot of questions before writing a single line of code.</p>
+                            <ul class="process__list">
+                                <li><i class="fa-solid fa-check"></i> Discovery call &amp; brief</li>
+                                <li><i class="fa-solid fa-check"></i> Competitive audit</li>
+                                <li><i class="fa-solid fa-check"></i> Tech requirements</li>
+                            </ul>
+                        </li>
+                        <li class="process__step js-process-step">
+                            <div class="process__head">
+                                <span class="process__num">02</span>
+                                <span class="process__icon"><i class="fa-solid fa-pencil-ruler fa-pen-ruler"></i></span>
+                            </div>
+                            <h3 class="process__ttl">Design</h3>
+                            <p class="process__txt">Wireframe, prototype, agree on look-and-feel. I set up a consistent design system before any production code.</p>
+                            <ul class="process__list">
+                                <li><i class="fa-solid fa-check"></i> Wireframes / mockups</li>
+                                <li><i class="fa-solid fa-check"></i> Design tokens &amp; type scale</li>
+                                <li><i class="fa-solid fa-check"></i> Component library</li>
+                            </ul>
+                        </li>
+                        <li class="process__step js-process-step">
+                            <div class="process__head">
+                                <span class="process__num">03</span>
+                                <span class="process__icon"><i class="fa-solid fa-code"></i></span>
+                            </div>
+                            <h3 class="process__ttl">Build</h3>
+                            <p class="process__txt">Write clean, accessible, performant code. I test on real devices and refactor as the project grows.</p>
+                            <ul class="process__list">
+                                <li><i class="fa-solid fa-check"></i> Semantic HTML</li>
+                                <li><i class="fa-solid fa-check"></i> SCSS / component-driven CSS</li>
+                                <li><i class="fa-solid fa-check"></i> Progressive enhancement</li>
+                            </ul>
+                        </li>
+                        <li class="process__step js-process-step">
+                            <div class="process__head">
+                                <span class="process__num">04</span>
+                                <span class="process__icon"><i class="fa-solid fa-rocket"></i></span>
+                            </div>
+                            <h3 class="process__ttl">Ship &amp; Support</h3>
+                            <p class="process__txt">Deploy with care, monitor performance, hand over docs &mdash; and stick around for updates &amp; SEO tweaks.</p>
+                            <ul class="process__list">
+                                <li><i class="fa-solid fa-check"></i> Lighthouse &amp; QA</li>
+                                <li><i class="fa-solid fa-check"></i> Docs &amp; handover</li>
+                                <li><i class="fa-solid fa-check"></i> Ongoing maintenance</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+           </section>
            <section class="top-services" id="service">
                 <div class="container">
+                    <p class="section-label"><span class="section-label__num">// 07.</span> what i do</p>
                     <h1 class="ttl-01">My <span>Services</span></h1>
                     <ul class="list-services">
-                        <li class="list-services__item">
-                            <a href="#" class="list-services__link">
+                        <li class="list-services__item" data-aos="fade-up">
+                            <a href="#contact" class="list-services__link">
+                                <span class="list-services__index">01</span>
                                 <div class="list-services__img">
                                     <img src="./assets/images/top/list-services_img04.png" alt="">
                                 </div>
-                                <h2 class="list-services__ttl">Wordpress Development</h2>
-                               
+                                <h2 class="list-services__ttl">WordPress Development</h2>
                                 <div class="list-services__wrap">
                                     <p class="list-services__txt">I develop custom WordPress websites using plugins such as Advanced Custom Fields (ACF), custom post types, and modern themes to create flexible, scalable, and easy-to-manage content structures.</p>
                                     <p class="list-services__link-btn">
-                                        Learn More <i class="fa-solid fa-angle-right"></i>
+                                        Learn More <i class="fa-solid fa-arrow-right"></i>
                                     </p>
                                 </div>
                             </a>
                         </li>
-                         <li class="list-services__item">
-                            <a href="#" class="list-services__link">
+                        <li class="list-services__item" data-aos="fade-up" data-aos-delay="100">
+                            <a href="#contact" class="list-services__link">
+                                <span class="list-services__index">02</span>
                                 <div class="list-services__img">
                                     <img src="./assets/images/top/list-services_img01.png" alt="">
                                 </div>
                                 <h2 class="list-services__ttl">Technical SEO</h2>
-                                
                                 <div class="list-services__wrap">
                                     <p class="list-services__txt">I apply technical SEO best practices to improve website performance, structure, and search engine visibility.</p>
                                     <p class="list-services__link-btn">
-                                        Learn More <i class="fa-solid fa-angle-right"></i>
+                                        Learn More <i class="fa-solid fa-arrow-right"></i>
                                     </p>
                                 </div>
                             </a>
                         </li>
-                        <li class="list-services__item">
-                            <a href="#" class="list-services__link">
+                        <li class="list-services__item" data-aos="fade-up" data-aos-delay="200">
+                            <a href="#contact" class="list-services__link">
+                                <span class="list-services__index">03</span>
                                 <div class="list-services__img">
                                     <img src="./assets/images/top/list-services_img03.png" alt="">
                                 </div>
@@ -216,87 +455,104 @@
                                 <div class="list-services__wrap">
                                     <p class="list-services__txt">I implement intuitive and responsive user interfaces that focus on usability, consistency, and smooth user interactions.</p>
                                     <p class="list-services__link-btn">
-                                        Learn More <i class="fa-solid fa-angle-right"></i>
+                                        Learn More <i class="fa-solid fa-arrow-right"></i>
                                     </p>
                                 </div>
                             </a>
                         </li>
                     </ul>
-                    <a href="#" class="btn-01">
-                        Show More
-                    </a>
                 </div>
            </section>
            <section class="top-contact" id="contact">
                 <div class="container">
+                    <p class="section-label"><span class="section-label__num">// 08.</span> say hello</p>
                     <h1 class="ttl-01">Get in <span>Touch</span></h1>
                     <div class="top-contact__info">
-                        <div class="top-contact__form">
-                            <h2 class="top-contact__ttl">Send Message</h2>
-                            <form  
-                                action="https://formspree.io/f/mzdvnjyq"
-                                method="POST">
-                               
-                                <input type="text" placeholder="Name" name="name">
-                                <input type="email" placeholder="Email" name="email">
-                              
-                                <textarea name="message" id="" placeholder="Message"></textarea>
-                                <button type="submit">Send Message</button>
-                            </form>
+                        <div class="top-contact__form panel" data-aos="fade-right">
+                            <div class="panel__bar">
+                                <span class="panel__dot panel__dot--r"></span>
+                                <span class="panel__dot panel__dot--y"></span>
+                                <span class="panel__dot panel__dot--g"></span>
+                                <span class="panel__file">contact.form</span>
+                            </div>
+                            <div class="panel__body">
+                                <h2 class="top-contact__ttl">Send Message</h2>
+                                <form action="https://formspree.io/f/mzdvnjyq" method="POST">
+                                    <label class="field">
+                                        <span class="field__label"><span class="tok-com">//</span> name</span>
+                                        <input type="text" placeholder="your name" name="name" required>
+                                    </label>
+                                    <label class="field">
+                                        <span class="field__label"><span class="tok-com">//</span> email</span>
+                                        <input type="email" placeholder="you@example.com" name="email" required>
+                                    </label>
+                                    <label class="field">
+                                        <span class="field__label"><span class="tok-com">//</span> message</span>
+                                        <textarea name="message" placeholder="tell me about your project..." required></textarea>
+                                    </label>
+                                    <button type="submit" class="btn btn--primary">
+                                        send message <i class="fa-solid fa-paper-plane"></i>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
-                        <div class="top-contact__wrap">
-                            <h2 class="top-contact__ttl">My Contact Deatails</h2>
-                            <p class="top-contact__txt">
-                                <span>Email</span>
-                                odijuan28@gmail.com
-                            </p>
-                            <p class="top-contact__txt">
-                                <span>Phone</span>
-                                +63 9297849369
-                            </p>
-                            <p class="top-contact__txt">
-                                <span>Address</span>
-                                Pasig, 1611<br>
-                                Blk 44 Lot 23,<br>
-                                Kalinawan Street.
-                            </p>
+                        <div class="top-contact__wrap" data-aos="fade-left">
+                            <h2 class="top-contact__ttl">Contact Details</h2>
+                            <ul class="contact-list">
+                                <li class="contact-list__item">
+                                    <span class="contact-list__icon"><i class="fa-regular fa-envelope"></i></span>
+                                    <div>
+                                        <span class="contact-list__label">email</span>
+                                        <a href="mailto:odijuan28@gmail.com" class="contact-list__value">odijuan28@gmail.com</a>
+                                    </div>
+                                </li>
+                                <li class="contact-list__item">
+                                    <span class="contact-list__icon"><i class="fa-solid fa-phone"></i></span>
+                                    <div>
+                                        <span class="contact-list__label">phone</span>
+                                        <a href="tel:+639297849369" class="contact-list__value">+63 929 784 9369</a>
+                                    </div>
+                                </li>
+                                <li class="contact-list__item">
+                                    <span class="contact-list__icon"><i class="fa-solid fa-location-dot"></i></span>
+                                    <div>
+                                        <span class="contact-list__label">address</span>
+                                        <span class="contact-list__value">Blk 44 Lot 23, Kalinawan St.<br>Pasig 1611, PH</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="contact-socials">
+                                <a href="mailto:odijuan28@gmail.com" class="contact-socials__link" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/in/juan-odi-815885272/" class="contact-socials__link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://www.facebook.com/odi.juan.7/" class="contact-socials__link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="https://github.com/JuanOdi" class="contact-socials__link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
            </section>
         </main> <!-- .main -->
 
-        <footer class="footer bg-gray">
-            <div class="container">
-                <p class="footer__copyright">Copyright © 2026. All rights reserved. Website developed by Juan Odi.</p>
-                <ul class="footer__wrap">
-                    <li class="footer__link-wrap">
-                        <a href="mailto:odijuan@gmail.com" class="footer__link">
-                            <img src="./assets/images/common/gmail.png" alt="">
-                        </a>
-                    </li>
-                    <li class="footer__link-wrap">
-                    <a href="https://www.linkedin.com/in/juan-odi-815885272/" class="footer__link">
-                        <img src="./assets/images/common/linkedin.png" alt="">
-                    </a>
-                </li>
-                    <li class="footer__link-wrap">
-                        <a href="https://www.facebook.com/odi.juan.7/" class="footer__link">
-                            <img src="./assets/images/common/facebook.png" alt="">
-                        </a>
-                    </li>
-                    <li class="footer__link-wrap">
-                        <a href="mailto:odijuan@gmail.com" class="footer__link">
-                            <img src="./assets/images/common/instagram.png" alt="">
-                        </a>
-                    </li>
-                </ul>
+        <footer class="footer">
+            <div class="container footer__container">
+                <p class="footer__copyright">
+                    <span class="tok-com">//</span> built &amp; designed by
+                    <span class="footer__name">Juan Odi</span>
+                    &middot; &copy; 2026
+                </p>
+                <p class="footer__signature">
+                    <span class="tok-key">return</span>
+                    <span class="tok-str">"thanks for scrolling"</span><span class="tok-op">;</span>
+                </p>
             </div>
         </footer> <!-- .footer -->
         
         <!-- Scripts -->
-        <script type="text/javascript" src="https://unpkg.com/aos@next/dist/aos.js" id="aos_script-js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" id="swiper_script-js"></script>
+        <!-- GSAP + ScrollTrigger -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" id="gsap_script-js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" id="gsap_scrolltrigger_script-js"></script>
         <script type="text/javascript" src="./assets/js/scripts.js" id="site_script-js"></script>
+        <script type="text/javascript" src="./assets/js/animations.js" id="site_animations-js"></script>
     </body>
 </html>

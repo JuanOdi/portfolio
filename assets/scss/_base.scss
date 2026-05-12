@@ -27,26 +27,47 @@ body {
   position: relative;
   padding: 0;
   margin: 0;
-  background: m.$white;
-  color: m.$white;
+  background: m.$bg-deep;
+  color: m.$txt-soft;
   font-size: m.$default-font-size;
   font-family: m.$font-primary;
   line-height: m.calculate_lh(16, 24);
   overflow-x: hidden;
   overscroll-behavior: auto;
+
+  // subtle grid backdrop
+  background-image:
+    radial-gradient(rgba(186, 201, 100, 0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  background-attachment: fixed;
 }
 
 main {
   overflow: hidden;
 
   section {
-    padding: 80px 0;
-    background-color: #222222;
+    position: relative;
+    padding: 120px 0;
+    background-color: transparent;
     @include m.mqMax {
-      padding: 70px 0;
+      padding: 80px 0;
     }
   }
 }
+
+::selection {
+  background: rgba(m.$accent, 0.35);
+  color: m.$white;
+}
+
+// Syntax-highlight token utility classes
+.tok-key  { color: m.$accent-pink; font-family: m.$font-mono; }
+.tok-var  { color: m.$accent-cyan; font-family: m.$font-mono; }
+.tok-prop { color: m.$accent-cyan; font-family: m.$font-mono; }
+.tok-str  { color: m.$accent;      font-family: m.$font-mono; }
+.tok-bool { color: m.$accent-pink; font-family: m.$font-mono; }
+.tok-op   { color: m.$txt-muted;   font-family: m.$font-mono; }
+.tok-com  { color: m.$txt-muted;   font-family: m.$font-mono; font-style: italic; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;

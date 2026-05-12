@@ -210,14 +210,7 @@
     app.initSwiper();
     app.initTabs();
 
-    if ( AOS ) {
-      AOS.init( {
-        disable: window.innerWidth < 992,
-        duration: 800,
-        easing: 'ease-out-quart',
-        once: true,
-      } );
-    }
+    // Reveal animations handled by GSAP + ScrollTrigger (see animations.js)
   } );
 
   /* Window Load */
