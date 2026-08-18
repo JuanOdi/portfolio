@@ -4,13 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Juan Odi — Front-end &amp; WordPress Developer</title>
-        <meta name="description" content="Juan Odi is a front-end and WordPress developer building fast, responsive, SEO-friendly websites.">
+        <title>Juan Odi — Web Developer</title>
+        <meta name="description" content="Juan Odi is a web developer specializing in WordPress — custom themes, ACF, Gutenberg, and fast, SEO-friendly websites for clients in Japan, Ireland, and the Philippines.">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/main.css">
@@ -18,9 +18,12 @@
 
     <body>
 
-        <header class="header">
+        <header class="header js-header">
             <div class="container header__inner">
-                <a class="header__brand" href="#top">Juan Odi</a>
+                <a class="header__brand" href="#top">
+                    <span class="header__brand-mark">JO</span>
+                    <span class="header__brand-name">Juan Odi</span>
+                </a>
 
                 <button class="header__toggle js-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
                     <span></span>
@@ -36,7 +39,10 @@
                         <li><a class="header__link" href="#services">Services</a></li>
                         <li><a class="header__link" href="#contact">Contact</a></li>
                     </ul>
-                    <a href="./assets/images/resume.pdf" class="header__resume" download>Resume</a>
+                    <div class="header__actions">
+                        <a href="./assets/images/resume.pdf" class="btn btn--ghost btn--sm" download>Resume</a>
+                        <a href="#contact" class="btn btn--sm">Let&rsquo;s talk</a>
+                    </div>
                 </nav>
             </div>
         </header>
@@ -45,162 +51,276 @@
 
             <!-- Hero -->
             <section class="hero">
-                <div class="container">
-                    <p class="hero__meta">
-                        <span class="hero__status"><span class="hero__status-dot"></span> Available for work</span>
-                        <span>Pasig, Philippines</span>
-                    </p>
-                    <h1 class="hero__title">
-                        Front-end developer crafting <em>clean</em>, fast, and reliable websites.
-                    </h1>
-                    <p class="hero__desc">
-                        I&rsquo;m Juan Odi &mdash; I build responsive, SEO-friendly websites with custom WordPress themes and thoughtful, user-focused interfaces.
-                    </p>
-                    <div class="hero__actions">
-                        <a href="#work" class="btn">View Work</a>
-                        <a href="./assets/images/resume.pdf" class="link-underline" download>Download Resume</a>
+                <div class="container hero__inner">
+                    <div class="hero__content">
+                        <p class="hero__meta">
+                            <span class="hero__status"><span class="hero__status-dot"></span> Available for work</span>
+                            <span class="hero__meta-sep" aria-hidden="true"></span>
+                            <span>Pasig, Philippines</span>
+                        </p>
+                        <h1 class="hero__title">
+                            Web developer building <span class="accent">clean, fast</span> and reliable websites.
+                        </h1>
+                        <p class="hero__desc">
+                            I&rsquo;m Juan Odi. I specialize in WordPress &mdash; custom themes, ACF, and Gutenberg &mdash; and I care about performance, SEO, and interfaces that feel effortless to use.
+                        </p>
+                        <div class="hero__actions">
+                            <a href="#work" class="btn btn--lg">View my work</a>
+                            <a href="./assets/images/resume.pdf" class="btn btn--ghost btn--lg" download>Download resume</a>
+                        </div>
+
+                        <ul class="hero__stats">
+                            <li>
+                                <span class="hero__stat-value">10+</span>
+                                <span class="hero__stat-label">Websites shipped</span>
+                            </li>
+                            <li>
+                                <span class="hero__stat-value">3+</span>
+                                <span class="hero__stat-label">Years experience</span>
+                            </li>
+                            <li>
+                                <span class="hero__stat-value">3</span>
+                                <span class="hero__stat-label">Countries served</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="hero__visual">
+                        <div class="hero__photo-frame">
+                            <img src="./assets/images/top/top-bnr_img.JPG" alt="Portrait of Juan Odi" class="hero__photo">
+                        </div>
+                        <div class="hero__card">
+                            <p class="hero__card-label">Core stack</p>
+                            <p class="hero__card-text">WordPress &middot; PHP &middot; ACF &middot; REACT JS &middot; SCSS &middot; JavaScript</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- Work -->
-            <section class="section section--bordered" id="work">
+            <section class="section" id="work">
                 <div class="container">
-                    <p class="section-label">Selected Work</p>
-                    <h2 class="section-title">Featured projects</h2>
+                    <div class="section-head">
+                        <div>
+                            <p class="section-label">Selected work</p>
+                            <h2 class="section-title">Featured projects</h2>
+                        </div>
+                        <p class="section-intro">
+                            A selection of client sites I&rsquo;ve designed and built &mdash; from block-editor marketing sites to fully custom WordPress themes and plugins.
+                        </p>
+                    </div>
 
-                    <ul class="work__grid">
-                        <li class="work-card reveal">
-                            <a href="https://gallagherfitzgerald.com/" target="_blank" rel="noopener noreferrer" class="work-card__link">
-                                <div class="work-card__img-wrap">
-                                    <img src="./assets/images/top/list-work_img01.png" alt="Gallagher Fitzgerald" class="work-card__img" loading="lazy">
+                    <ol class="work-list">
+                        <li class="work-item reveal">
+                            <a href="https://gallagherfitzgerald.com/" target="_blank" rel="noopener noreferrer" class="work-item__link">
+                                <span class="work-item__num">01</span>
+                                <div class="work-item__thumb">
+                                    <img src="./assets/images/top/list-work_img01.png" alt="Gallagher Fitzgerald website" loading="lazy">
                                 </div>
-                                <div class="work-card__head">
-                                    <h3 class="work-card__title">Gallagher Fitzgerald</h3>
-                                    <span class="work-card__arrow" aria-hidden="true">&#8599;</span>
+                                <div class="work-item__body">
+                                    <p class="work-item__meta">Landscape design studio <span aria-hidden="true">&middot;</span> Dublin, Ireland</p>
+                                    <h3 class="work-item__title">Gallagher Fitzgerald</h3>
+                                    <p class="work-item__desc">Marketing site for a Dublin landscape design studio. Built on the WordPress block editor with reusable custom block patterns, so the client can add and edit sections without touching code.</p>
+                                    <ul class="work-item__tags">
+                                        <li>WordPress</li>
+                                        <li>Gutenberg</li>
+                                        <li>Block Patterns</li>
+                                        <li>CSS</li>
+                                        <li>Responsive</li>
+                                    </ul>
                                 </div>
-                                <p class="work-card__tag">Web Design</p>
+                                <span class="work-item__arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                             </a>
                         </li>
-                        <li class="work-card reveal">
-                            <a href="https://acecarpentry.ie/" target="_blank" rel="noopener noreferrer" class="work-card__link">
-                                <div class="work-card__img-wrap">
-                                    <img src="./assets/images/top/list-work_img03.png" alt="Ace Carpentry" class="work-card__img" loading="lazy">
+                        <li class="work-item reveal">
+                            <a href="https://acecarpentry.ie/" target="_blank" rel="noopener noreferrer" class="work-item__link">
+                                <span class="work-item__num">02</span>
+                                <div class="work-item__thumb">
+                                    <img src="./assets/images/top/list-work_img03.png" alt="Ace Carpentry website" loading="lazy">
                                 </div>
-                                <div class="work-card__head">
-                                    <h3 class="work-card__title">Ace Carpentry</h3>
-                                    <span class="work-card__arrow" aria-hidden="true">&#8599;</span>
+                                <div class="work-item__body">
+                                    <p class="work-item__meta">Carpentry &amp; joinery <span aria-hidden="true">&middot;</span> Ireland</p>
+                                    <h3 class="work-item__title">Ace Carpentry</h3>
+                                    <p class="work-item__desc">Business website for an Irish carpentry company. Gutenberg-based page layouts, service and project showcase pages, and a lead-focused contact flow &mdash; easy for the owner to maintain.</p>
+                                    <ul class="work-item__tags">
+                                        <li>WordPress</li>
+                                        <li>Gutenberg</li>
+                                        <li>Block Patterns</li>
+                                        <li>JavaScript</li>
+                                        <li>SEO</li>
+                                    </ul>
                                 </div>
-                                <p class="work-card__tag">WordPress</p>
+                                <span class="work-item__arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                             </a>
                         </li>
-                        <li class="work-card reveal">
-                            <a href="https://smatching.jp/" target="_blank" rel="noopener noreferrer" class="work-card__link">
-                                <div class="work-card__img-wrap">
-                                    <img src="./assets/images/top/list-work_img02.png" alt="Smatching.jp" class="work-card__img" loading="lazy">
+                        <li class="work-item reveal">
+                            <a href="https://smatching.jp/" target="_blank" rel="noopener noreferrer" class="work-item__link">
+                                <span class="work-item__num">03</span>
+                                <div class="work-item__thumb">
+                                    <img src="./assets/images/top/list-work_img02.png" alt="Smatching.jp website" loading="lazy">
                                 </div>
-                                <div class="work-card__head">
-                                    <h3 class="work-card__title">Smatching.jp</h3>
-                                    <span class="work-card__arrow" aria-hidden="true">&#8599;</span>
+                                <div class="work-item__body">
+                                    <p class="work-item__meta">Housing consultation service <span aria-hidden="true">&middot;</span> Mie, Japan</p>
+                                    <h3 class="work-item__title">Smatching.jp</h3>
+                                    <p class="work-item__desc">Japanese home-buying consultation service. Fully custom WordPress theme built from scratch, with ACF flexible content, custom post types, and a custom plugin for consultation and testimonial content.</p>
+                                    <ul class="work-item__tags">
+                                        <li>WordPress</li>
+                                        <li>Custom Theme</li>
+                                        <li>Custom Plugin</li>
+                                        <li>ACF</li>
+                                        <li>PHP</li>
+                                        <li>SCSS</li>
+                                        <li>jQuery</li>
+                                    </ul>
                                 </div>
-                                <p class="work-card__tag">Web App</p>
+                                <span class="work-item__arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                             </a>
                         </li>
-                        <li class="work-card reveal">
-                            <a href="https://fujinaika-clinic.com/" target="_blank" rel="noopener noreferrer" class="work-card__link">
-                                <div class="work-card__img-wrap">
-                                    <img src="./assets/images/top/list-work_img07.png" alt="Fuji Naika Clinic" class="work-card__img" loading="lazy">
+                        <li class="work-item reveal">
+                            <a href="https://jyokoji-kitakoshigaya.jp/" target="_blank" rel="noopener noreferrer" class="work-item__link">
+                                <span class="work-item__num">04</span>
+                                <div class="work-item__thumb">
+                                    <img src="./assets/images/top/list-work_img08.png" alt="Jyokoji Kitakoshigaya website" loading="lazy">
                                 </div>
-                                <div class="work-card__head">
-                                    <h3 class="work-card__title">Fuji Naika Clinic</h3>
-                                    <span class="work-card__arrow" aria-hidden="true">&#8599;</span>
+                                <div class="work-item__body">
+                                    <p class="work-item__meta">Buddhist temple <span aria-hidden="true">&middot;</span> Saitama, Japan</p>
+                                    <h3 class="work-item__title">Jyokoji Kitakoshigaya</h3>
+                                    <p class="work-item__desc">Official website for a temple in Kitakoshigaya. Custom theme and plugin development with ACF-driven pages for services, events, and announcements that the temple staff manage themselves.</p>
+                                    <ul class="work-item__tags">
+                                        <li>WordPress</li>
+                                        <li>Custom Theme</li>
+                                        <li>Custom Plugin</li>
+                                        <li>ACF</li>
+                                        <li>PHP</li>
+                                        <li>SCSS</li>
+                                    </ul>
                                 </div>
-                                <p class="work-card__tag">Clinic Site</p>
+                                <span class="work-item__arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                             </a>
                         </li>
-                        <li class="work-card reveal">
-                            <a href="https://jyokoji-kitakoshigaya.jp/" target="_blank" rel="noopener noreferrer" class="work-card__link">
-                                <div class="work-card__img-wrap">
-                                    <img src="./assets/images/top/list-work_img08.png" alt="Jyokoji Kitakoshigaya" class="work-card__img" loading="lazy">
+                        <li class="work-item reveal">
+                            <a href="https://fujinaika-clinic.com/" target="_blank" rel="noopener noreferrer" class="work-item__link">
+                                <span class="work-item__num">05</span>
+                                <div class="work-item__thumb">
+                                    <img src="./assets/images/top/list-work_img07.png" alt="Fuji Naika Clinic website" loading="lazy">
                                 </div>
-                                <div class="work-card__head">
-                                    <h3 class="work-card__title">Jyokoji Kitakoshigaya</h3>
-                                    <span class="work-card__arrow" aria-hidden="true">&#8599;</span>
+                                <div class="work-item__body">
+                                    <p class="work-item__meta">Medical clinic <span aria-hidden="true">&middot;</span> Saitama, Japan</p>
+                                    <h3 class="work-item__title">Fuji Naika Clinic</h3>
+                                    <p class="work-item__desc">Clinic website with department pages, consultation hours, news, and access information. Custom WordPress theme with ACF-managed content, built for a calm, trustworthy first impression.</p>
+                                    <ul class="work-item__tags">
+                                        <li>WordPress</li>
+                                        <li>Custom Theme</li>
+                                        <li>ACF</li>
+                                        <li>PHP</li>
+                                        <li>SCSS</li>
+                                    </ul>
                                 </div>
-                                <p class="work-card__tag">Temple Site</p>
+                                <span class="work-item__arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                             </a>
                         </li>
-                        <li class="work-card work-card--soon reveal">
-                            <div class="work-card__link">
-                                <div class="work-card__img-wrap">
-                                    <img src="./assets/images/top/list-work_img06.png" alt="Kansai Medical University" class="work-card__img" loading="lazy">
+                        <li class="work-item reveal">
+                            <a href="https://nakamura-kenkou.com/" target="_blank" rel="noopener noreferrer" class="work-item__link">
+                                <span class="work-item__num">06</span>
+                                <div class="work-item__thumb">
+                                    <img src="./assets/images/top/list-work_img09.png" alt="Nakamura Kenkou website" loading="lazy">
                                 </div>
-                                <div class="work-card__head">
-                                    <h3 class="work-card__title">Kansai Medical University</h3>
+                                <div class="work-item__body">
+                                    <p class="work-item__meta">Water &amp; plumbing construction <span aria-hidden="true">&middot;</span> Japan</p>
+                                    <h3 class="work-item__title">Nakamura Kenkou</h3>
+                                    <p class="work-item__desc">Corporate website for a water-supply and plumbing construction company. Custom WordPress theme with ACF-managed company, service, and recruitment pages, plus an illustrated, animated hero.</p>
+                                    <ul class="work-item__tags">
+                                        <li>WordPress</li>
+                                        <li>Custom Theme</li>
+                                        <li>ACF</li>
+                                        <li>PHP</li>
+                                        <li>SCSS</li>
+                                        <li>JavaScript</li>
+                                    </ul>
                                 </div>
-                                <p class="work-card__tag">In Progress</p>
-                            </div>
+                                <span class="work-item__arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M12 4H6M12 4V10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                            </a>
                         </li>
-                    </ul>
+                    </ol>
                 </div>
             </section>
 
             <!-- About -->
-            <section class="section section--bordered" id="about">
+            <section class="section section--alt" id="about">
                 <div class="container">
-                    <p class="section-label">About</p>
-                    <h2 class="section-title">A little about me</h2>
-
                     <div class="about__grid">
-                        <img src="./assets/images/top/top-bnr_img.JPG" alt="Juan Odi" class="about__photo reveal" loading="lazy">
-
-                        <div class="reveal">
+                        <div class="about__intro reveal">
+                            <p class="section-label">About</p>
+                            <h2 class="section-title">A little about me</h2>
                             <p class="about__text">
-                                I&rsquo;m Juan Odi, a front-end and WordPress developer specializing in building responsive, SEO-friendly websites. I create custom WordPress solutions using ACF and custom post types, implement intuitive UI/UX, and provide ongoing maintenance and technical SEO support to deliver efficient, user-focused web experiences.
+                                I&rsquo;m Juan Odi, a web developer specializing in WordPress. I build responsive, SEO-friendly websites with custom themes, ACF, and custom post types, implement intuitive UI/UX, and provide ongoing maintenance and technical SEO support.
                             </p>
+                            <p class="about__text">
+                                I&rsquo;ve shipped sites for clients in Japan, Ireland, and the Philippines &mdash; and I enjoy the balance of writing clean code and making things simple for the people who edit them afterwards.
+                            </p>
+                            <a href="#contact" class="link-arrow">Get in touch <span aria-hidden="true">&rarr;</span></a>
+                        </div>
 
-                            <div class="about__facts">
-                                <div>
-                                    <p class="about__fact-value">10+</p>
-                                    <p class="about__fact-label">Websites shipped</p>
-                                </div>
-                                <div>
-                                    <p class="about__fact-value">3+</p>
-                                    <p class="about__fact-label">Years experience</p>
-                                </div>
-                                <div>
-                                    <p class="about__fact-value">3</p>
-                                    <p class="about__fact-label">Countries served</p>
-                                </div>
+                        <div class="skills reveal">
+                            <div class="skills__group">
+                                <p class="skills__title">Front-end</p>
+                                <ul class="skills__list">
+                                    <li>HTML5</li>
+                                    <li>CSS / SCSS</li>
+                                    <li>JavaScript</li>
+                                    <li>jQuery</li>
+                                    <li>React</li>
+                                    <li>Responsive design</li>
+                                </ul>
                             </div>
-
-                            <p class="about__skills-label">Skills &amp; Tools</p>
-                            <p class="about__skills">
-                                HTML &middot; CSS / SCSS &middot; JavaScript &middot; jQuery &middot; React &middot; PHP &middot; WordPress &middot; ACF &middot; Technical SEO
-                            </p>
+                            <div class="skills__group">
+                                <p class="skills__title">WordPress</p>
+                                <ul class="skills__list">
+                                    <li>Custom themes</li>
+                                    <li>Custom plugins</li>
+                                    <li>ACF</li>
+                                    <li>Gutenberg</li>
+                                    <li>Custom post types</li>
+                                    <li>PHP</li>
+                                </ul>
+                            </div>
+                            <div class="skills__group">
+                                <p class="skills__title">Also</p>
+                                <ul class="skills__list">
+                                    <li>Technical SEO</li>
+                                    <li>Performance</li>
+                                    <li>Git</li>
+                                    <li>Figma to code</li>
+                                    <li>Site maintenance</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Experience -->
-            <section class="section section--bordered" id="experience">
+            <section class="section" id="experience">
                 <div class="container">
-                    <p class="section-label">Journey</p>
-                    <h2 class="section-title">Experience</h2>
+                    <div class="section-head">
+                        <div>
+                            <p class="section-label">Journey</p>
+                            <h2 class="section-title">Experience</h2>
+                        </div>
+                    </div>
 
                     <ol class="timeline">
                         <li class="timeline__item reveal">
                             <p class="timeline__date">2025 &mdash; Present</p>
-                            <div>
+                            <div class="timeline__body">
                                 <h3 class="timeline__title">React &amp; Modern Stack</h3>
-                                <p class="timeline__org">Front-end Developer</p>
+                                <p class="timeline__org">Freelance Front-end Developer</p>
                                 <p class="timeline__text">Expanding into React, component-driven architecture, and interactive UI work with modern tooling. Always learning.</p>
                             </div>
                         </li>
                         <li class="timeline__item reveal">
-                            <p class="timeline__date">2024</p>
-                            <div>
+                            <p class="timeline__date">2024 &mdash; Present</p>
+                            <div class="timeline__body">
                                 <h3 class="timeline__title">WordPress &amp; Custom Themes</h3>
                                 <p class="timeline__org">Full-stack WordPress Developer</p>
                                 <p class="timeline__text">Built custom themes using ACF, custom post types, and clean PHP. Delivered SEO-optimized, fast clinic and corporate sites.</p>
@@ -208,15 +328,15 @@
                         </li>
                         <li class="timeline__item reveal">
                             <p class="timeline__date">2023</p>
-                            <div>
+                            <div class="timeline__body">
                                 <h3 class="timeline__title">First Production Sites</h3>
-                                <p class="timeline__org">Freelance Front-end Developer</p>
+                                <p class="timeline__org">Freelance Web Developer</p>
                                 <p class="timeline__text">Shipped responsive marketing sites for clients in Japan and Ireland. Started writing reusable SCSS architectures.</p>
                             </div>
                         </li>
                         <li class="timeline__item reveal">
                             <p class="timeline__date">2020</p>
-                            <div>
+                            <div class="timeline__body">
                                 <h3 class="timeline__title">Started Computer Science</h3>
                                 <p class="timeline__org">Bachelor of Computer Science</p>
                                 <p class="timeline__text">Began my formal CS journey &mdash; discovered the web and fell in love with HTML, CSS, and turning ideas into pixels.</p>
@@ -227,27 +347,34 @@
             </section>
 
             <!-- Services -->
-            <section class="section section--bordered" id="services">
+            <section class="section section--alt" id="services">
                 <div class="container">
-                    <p class="section-label">What I Do</p>
-                    <h2 class="section-title">Services</h2>
+                    <div class="section-head">
+                        <div>
+                            <p class="section-label">What I do</p>
+                            <h2 class="section-title">Services</h2>
+                        </div>
+                        <p class="section-intro">
+                            From a first design file to a live, maintainable site &mdash; and the support to keep it fast afterwards.
+                        </p>
+                    </div>
 
                     <div class="services">
-                        <div class="service reveal">
+                        <article class="service reveal">
                             <span class="service__num">01</span>
                             <h3 class="service__title">WordPress Development</h3>
-                            <p class="service__text">Custom WordPress websites using ACF, custom post types, and modern themes &mdash; flexible, scalable, and easy to manage.</p>
-                        </div>
-                        <div class="service reveal">
+                            <p class="service__text">Custom WordPress websites using ACF, custom post types, Gutenberg blocks, and bespoke themes &mdash; flexible, scalable, and easy to manage.</p>
+                        </article>
+                        <article class="service reveal">
                             <span class="service__num">02</span>
                             <h3 class="service__title">Technical SEO</h3>
-                            <p class="service__text">Technical SEO best practices to improve website performance, structure, and search engine visibility.</p>
-                        </div>
-                        <div class="service reveal">
+                            <p class="service__text">Clean markup, structured data, Core Web Vitals, and performance tuning to improve visibility and search rankings.</p>
+                        </article>
+                        <article class="service reveal">
                             <span class="service__num">03</span>
                             <h3 class="service__title">UI / UX Implementation</h3>
-                            <p class="service__text">Intuitive, responsive user interfaces focused on usability, consistency, and smooth interactions.</p>
-                        </div>
+                            <p class="service__text">Pixel-accurate, responsive interfaces from Figma or design files, focused on usability, consistency, and smooth interactions.</p>
+                        </article>
                     </div>
                 </div>
             </section>
@@ -255,14 +382,14 @@
             <!-- Contact -->
             <section class="contact" id="contact">
                 <div class="container">
-                    <p class="section-label">Contact</p>
-                    <h2 class="contact__title">Let&rsquo;s work <em>together</em>.</h2>
-                    <p class="contact__lead">
-                        Have a project in mind? I&rsquo;m open to freelance work and full-time opportunities.
-                    </p>
-
                     <div class="contact__grid">
                         <div class="reveal">
+                            <p class="section-label section-label--light">Contact</p>
+                            <h2 class="contact__title">Let&rsquo;s build something <span class="accent-light">together</span>.</h2>
+                            <p class="contact__lead">
+                                Have a project in mind? I&rsquo;m open to freelance work and full-time opportunities. Tell me a bit about it and I&rsquo;ll get back to you within a day.
+                            </p>
+
                             <ul class="contact__list">
                                 <li>
                                     <p class="contact__item-label">Email</p>
@@ -297,14 +424,14 @@
                                 <label class="form__label" for="contact-message">Message</label>
                                 <textarea class="form__input" id="contact-message" name="message" placeholder="Tell me about your project..." required></textarea>
                             </div>
-                            <button type="submit" class="btn">Send Message</button>
+                            <button type="submit" class="btn btn--lg btn--light">Send message</button>
                         </form>
                     </div>
                 </div>
 
                 <footer class="footer">
                     <div class="container footer__inner">
-                        <p class="footer__text">&copy; <span class="js-year">2026</span> Juan Odi. All rights reserved.</p>
+                        <p class="footer__text">&copy; <span class="js-year">2026</span> Juan Odi. Web Developer &mdash; Pasig, Philippines.</p>
                         <a href="#top" class="footer__top">Back to top &uarr;</a>
                     </div>
                 </footer>

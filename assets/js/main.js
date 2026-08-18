@@ -1,3 +1,13 @@
+// Header: add a border/shadow once the page is scrolled
+const header = document.querySelector('.js-header');
+
+const onScroll = () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 8);
+};
+
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
+
 // Mobile menu
 const toggle = document.querySelector('.js-menu-toggle');
 const nav = document.querySelector('.js-nav');
@@ -23,7 +33,7 @@ reveals.forEach((el) => {
     const siblings = el.parentElement.querySelectorAll(':scope > .reveal');
     if (siblings.length > 1) {
         const index = Array.prototype.indexOf.call(siblings, el);
-        el.style.setProperty('--reveal-delay', `${(index % 4) * 0.1}s`);
+        el.style.setProperty('--reveal-delay', `${(index % 4) * 0.08}s`);
     }
 });
 
